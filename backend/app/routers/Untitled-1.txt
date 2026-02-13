@@ -1,0 +1,95 @@
+# 
+
+{
+  "categories": [
+    {
+      "id": 1,
+      "items": [
+        {
+          "currency": "TRY",
+          "description": "Lezzetli ba\u015flang\u0131\u00e7lar 1",
+          "id": 1,
+          "image_url": null,
+          "name": "Ba\u015flang\u0131\u00e7lar \u00dcr\u00fcn 1",
+          "price": 110.0,
+          "sort_order": 1
+        },
+        {
+          "currency": "TRY",
+          "description": "Lezzetli ba\u015flang\u0131\u00e7lar 2",
+          "id": 2,
+          "image_url": null,
+          "name": "Ba\u015flang\u0131\u00e7lar \u00dcr\u00fcn 2",
+          "price": 120.0,
+          "sort_order": 2
+        }
+      ],
+      "name": "Ba\u015flang\u0131\u00e7lar"
+    },
+    {
+      "id": 2,
+      "items": [
+        {
+          "currency": "TRY",
+          "description": "Lezzetli ana yemekler 1",
+          "id": 3,
+          "image_url": null,
+          "name": "Ana Yemekler \u00dcr\u00fcn 1",
+          "price": 210.0,
+          "sort_order": 1
+        },
+        {
+          "currency": "TRY",
+          "description": "Lezzetli ana yemekler 2",
+          "id": 4,
+          "image_url": null,
+          "name": "Ana Yemekler \u00dcr\u00fcn 2",
+          "price": 220.0,
+          "sort_order": 2
+        }
+      ],
+      "name": "Ana Yemekler"
+    },
+    {
+      "id": 3,
+      "items": [
+        {
+          "currency": "TRY",
+          "description": "Lezzetli i\u0307\u00e7ecekler 1",
+          "id": 5,
+          "image_url": null,
+          "name": "\u0130\u00e7ecekler \u00dcr\u00fcn 1",
+          "price": 310.0,
+          "sort_order": 1
+        },
+        {
+          "currency": "TRY",
+          "description": "Lezzetli i\u0307\u00e7ecekler 2",
+          "id": 6,
+          "image_url": null,
+          "name": "\u0130\u00e7ecekler \u00dcr\u00fcn 2",
+          "price": 320.0,
+          "sort_order": 2
+        }
+      ],
+      "name": "\u0130\u00e7ecekler"
+    },
+    {
+      "id": 4,
+      "items": [
+        {
+          "currency": "TRY",
+          "description": null,
+          "id": 7,
+          "image_url": null,
+          "name": "Baklava",
+          "price": 150.0,
+          "sort_order": 0
+        }
+      ],
+      "name": "Tatlilar"
+    }
+  ],
+  "restaurant_name": "Demo Restoran",
+  "slug": "demo-restoran"
+}
