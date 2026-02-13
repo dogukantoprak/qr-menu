@@ -11,7 +11,7 @@ const api = axios.create({
         'Accept': 'application/json'
     },
     // 2. Timeout to fail fast if backend is dead (5 seconds)
-    timeout: 5000
+    timeout: 30000
 });
 
 // 3. Robust Token Attachment
