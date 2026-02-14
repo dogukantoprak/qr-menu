@@ -1,135 +1,127 @@
 🍽️ QR Menu
-Full Stack Restaurant Management System
 
-Backend-focused full stack application built with Flask & React.
+QR kod tabanlı dijital menü ve sipariş sistemi.
 
-📌 Overview
+Müşteriler QR kod ile menüye erişir, sepete ürün ekler ve sipariş verir.
+Restoran sahipleri admin panelinden sistemi yönetir.
 
-QR Menu is a full stack restaurant management system that allows:
+✨ Özellikler
+👤 Müşteri
 
-Admins to manage restaurants, categories and menu items
+QR ile menü erişimi
 
-Customers to view public menus via shareable links / QR
+Kategorili menü yapısı
 
-Secure login with JWT authentication
+Sepet & sipariş oluşturma
 
-Structured REST API architecture
+Sipariş durumu görüntüleme
 
-🏗️ Architecture
+🛠️ Admin
+
+Kategori & ürün CRUD
+
+Sipariş takibi
+
+Masa oluşturma & QR üretimi
+
+Görsel yükleme
+
+Restoran ayarları
+
+🧱 Teknolojiler
+
+Backend: Flask • SQLAlchemy • Flask-JWT-Extended • SQLite/PostgreSQL
+Frontend: React • Vite • TailwindCSS • React Router
+
+🚀 Kurulum
 Backend
-
-Flask
-
-Flask-JWT-Extended
-
-Flask-SQLAlchemy
-
-PostgreSQL / SQLite
-
-Gunicorn (WSGI)
-
-CORS Configuration
-
-Frontend
-
-React
-
-Vite
-
-Axios
-
-🔐 Authentication
-
-JWT-based login system
-
-Role-based access control
-
-Protected admin routes
-
-Public-facing endpoints
-
-Login Endpoint:
-
-POST /api/auth/login
-📂 Project Structure
-qr-menu/
-│
-├── backend/
-│   ├── app/
-│   │   ├── main.py
-│   │   ├── routers/
-│   │   ├── models/
-│   │   └── schemas/
-│   └── requirements.txt
-│
-└── frontend/
-    ├── src/
-    │   ├── components/
-    │   ├── api/
-    │   └── layouts/
-    └── package.json
-🚀 Running Locally
-1️⃣ Backend
 cd backend
 python -m venv .venv
-.venv\Scripts\activate   # Windows
+.venv\Scripts\activate
 pip install -r requirements.txt
 python -m app.main
 
-Health Check:
+Backend: http://localhost:5000
 
-GET /api/health
-2️⃣ Frontend
+Frontend
 cd frontend
 npm install
 npm run dev
-⚙️ Environment Variables
-Backend
 
-DATABASE_URL
+Frontend: http://localhost:5173
 
-JWT_SECRET_KEY
+🔑 Ortam Değişkenleri
 
-FRONTEND_URL
+backend/.env
 
-Frontend
+JWT_SECRET_KEY=secret
+DATABASE_URL=sqlite:///qrmenu.db
+FRONTEND_URL=http://localhost:5173
 
-VITE_API_BASE_URL
+frontend/.env
 
-Example:
+VITE_API_BASE_URL=http://localhost:5000
+🔐 Demo
+Email	Şifre
+owner@demo.com
+	123456
 
-VITE_API_BASE_URL=https://your-backend.onrender.com/api
-🛠️ Deployment
+Admin → /admin/login
+Menü → /r/demo-restoran
+
+🔌 API
+Public
+
+GET /api/public/restaurants/:slug/menu
+
+POST /api/public/orders
+
+GET /api/public/orders/:id
+
+Auth
+
+POST /api/auth/login
+
+Admin (JWT)
+
+/api/admin/categories
+
+/api/admin/items
+
+/api/admin/orders
+
+/api/admin/tables
+
+/api/admin/settings
+
+🌍 Deployment
+
 Backend (Render)
+Start: gunicorn app.main:app
 
-Root Directory: backend
-
-Start Command:
-
-gunicorn app.main:app
 Frontend (Vercel)
+Env: VITE_API_BASE_URL
 
-Set VITE_API_BASE_URL
+📁 Proje Yapısı
+qr-menu/
+├── backend/
+│   ├── app/
+│   │   ├── main.py
+│   │   ├── models/
+│   │   └── routers/
+│   └── requirements.txt
+└── frontend/
+    └── src/
+        ├── components/
+        └── context/
+🧠 Uygulanan Konseptler
 
-Ensure CORS is configured properly
-
-🧪 Demo Credentials
-Email: owner@demo.com
-Password: 123456
-🧠 Core Concepts Applied
-
-RESTful API design
-
-Modular Flask Blueprints
+RESTful API
 
 JWT Authentication
 
-Database schema design
+Role-based access
 
-CORS handling
+Relational DB design
 
-Production deployment configuration
-
-📎 Repository
-
-👉 https://github.com/dogukantoprak/qr-menu
+Modular Flask Blueprint yapısı
